@@ -25,7 +25,7 @@ pip install binance-futures-connector
 Usage examples:
 ```python
 
-from binance.cm_futures import CMFutures
+from binance_future.cm_futures import CMFutures
 
 cm_futures_client = CMFutures()
 
@@ -94,10 +94,10 @@ response = client.query_order('BTCUSDT', order_list_id=1)
 
 Additional parameter `recvWindow` is available for endpoints requiring signature.<br/>
 It defaults to `5000` (milliseconds) and can be any value lower than `60000`(milliseconds).
-Anything beyond the limit will result in an error response from Binance server.
+Anything beyond the limit will result in an error response from binance_future server.
 
 ```python
-from binance.cm_futures import CMFutures
+from binance_future.cm_futures import CMFutures
 
 cm_futures_client = CMFutures(key='<api_key>', secret='<api_secret>')
 response = cm_futures_client.query_order('BTCUSDT', orderId=11, recvWindow=10000)
@@ -110,7 +110,7 @@ Please remember the value as it won't be shown in error message _no bytes have b
 By default, `timeout` is None. Hence, requests do not time out.
 
 ```python
-from binance.cm_futures import CMFutures
+from binance_future.cm_futures import CMFutures
 
 client= CMFutures(timeout=1)
 ```
@@ -119,7 +119,7 @@ client= CMFutures(timeout=1)
 proxy is supported
 
 ```python
-from binance.cm_futures import CMFutures
+from binance_future.cm_futures import CMFutures
 
 proxies = { 'https': 'http://1.2.3.4:8080' }
 
@@ -132,7 +132,7 @@ The Binance API server provides weight usages in the headers of each response.
 You can display them by initializing the client with `show_limit_usage=True`:
 
 ```python
-from binance.cm_futures import CMFutures
+from binance_future.cm_futures import CMFutures
 
 client = CMFutures(show_limit_usage=True)
 print(client.time())
@@ -185,7 +185,7 @@ WebSocket can be established through the following connections:
 ```python
 # WebSocket Stream Client
 import time
-from binance.websocket.um_futures.websocket_client import UMFuturesWebsocketClient
+from binance_future.websocket.um_futures.websocket_client import UMFuturesWebsocketClient
 
 def message_handler(_, message):
     logging.info(message)
@@ -235,7 +235,7 @@ proxies = { 'http': 'http://username:password@host:port' }
 ```python
 # WebSocket Stream Client
 import time
-from binance.websocket.um_futures.websocket_client import UMFuturesWebsocketClient
+from binance_future.websocket.um_futures.websocket_client import UMFuturesWebsocketClient
 
 proxies = {'http': 'http://1.2.3.4:8080'}
 
@@ -262,7 +262,7 @@ More websocket examples are available in the `examples` folder
 
 ```python
 import time
-from binance.websocket.um_futures.websocket_client import UMFuturesWebsocketClient
+from binance_future.websocket.um_futures.websocket_client import UMFuturesWebsocketClient
 
 def message_handler(message):
     print(message)

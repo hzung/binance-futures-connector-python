@@ -1,4 +1,4 @@
-from binance.lib.utils import check_required_parameter
+from binance_future.lib.utils import check_required_parameter
 
 
 def new_listen_key(self):

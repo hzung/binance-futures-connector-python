@@ -1,7 +1,7 @@
 #!/usr/bin/env python
-from binance.um_futures import UMFutures
+from binance_future.um_futures import UMFutures
 import logging
-from binance.lib.utils import config_logging
+from binance_future.lib.utils import config_logging
 
 config_logging(logging, logging.DEBUG)
 

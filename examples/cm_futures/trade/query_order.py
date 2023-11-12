@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
 import logging
-from binance.cm_futures import CMFutures as Client
-from binance.lib.utils import config_logging
-from binance.error import ClientError
+from binance_future.cm_futures import CMFutures as Client
+from binance_future.lib.utils import config_logging
+from binance_future.error import ClientError
 
 config_logging(logging, logging.DEBUG)
 
